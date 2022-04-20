@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_shop/screens/splash_screen.dart';
-import 'package:fruit_shop/screens/welcome_screen.dart';
+import 'package:fruit_shop/router/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  WelcomeScreen(),
+      initialRoute: '/welcome_splash',
+      onGenerateRoute: (settings) => RouterGenerator.genaralRoute(settings),
     );
   }
 }
-
